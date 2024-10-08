@@ -44,4 +44,5 @@ foreach ($font in $fonts.GetEnumerator()) {
     Install-Font -url $font.Value -fontName $font.Key
 }
 
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 Write-Host "Oh My Posh e as fontes foram instalados e configurados. Por favor, reinicie o PowerShell para aplicar as mudanças."
