@@ -1,11 +1,12 @@
 Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope Process -Force
-winget install JanDeDobbeleer.OhMyPosh -s winget
 
 if (!(Test-Path -Path $PROFILE)) {
     New-Item -ItemType File -Path $PROFILE -Force
 }
 
 Add-Content -Path $PROFILE -Value "`noh-my-posh init pwsh | Invoke-Expression"
+
+winget install JanDeDobbeleer.OhMyPosh -s winget
 
 function Install-Font {
     param (
