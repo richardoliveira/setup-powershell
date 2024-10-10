@@ -1,10 +1,12 @@
 Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope Process -Force
 
-if (!(Test-Path -Path $PROFILE)) {
-    New-Item -ItemType File -Path $PROFILE -Force
-}
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 
-Add-Content -Path $PROFILE -Value "`noh-my-posh init pwsh | Invoke-Expression"
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+
+if (!(Test-Path -Path $PROFILE)) { New-Item -Type File -Path $PROFILE -Force }
+
+"noh-my-posh init pwsh | Invoke-Expression" | Out-File -FilePath $PROFILE -Append
 
 winget install JanDeDobbeleer.OhMyPosh -s winget
 
