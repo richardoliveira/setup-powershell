@@ -6,7 +6,7 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 
 if (!(Test-Path -Path $PROFILE)) { New-Item -Type File -Path $PROFILE -Force }
 
-"noh-my-posh init pwsh | Invoke-Expression" | Out-File -FilePath $PROFILE -Append
+"oh-my-posh init pwsh | Invoke-Expression" | Out-File -FilePath $PROFILE -Append
 
 winget install JanDeDobbeleer.OhMyPosh -s winget
 
@@ -47,4 +47,6 @@ foreach ($font in $fonts.GetEnumerator()) {
 }
 
 Set-ExecutionPolicy -ExecutionPolicy Unrestricted
+
+wsl --install
 Write-Host "Oh My Posh e as fontes foram instalados e configurados. Por favor, reinicie o PowerShell para aplicar as mudanças."
