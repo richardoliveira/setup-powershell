@@ -8,6 +8,8 @@ if (!(Test-Path -Path $PROFILE)) { New-Item -Type File -Path $PROFILE -Force }
 
 "oh-my-posh init pwsh | Invoke-Expression" | Out-File -FilePath $PROFILE -Append
 
+winget install --id Git.Git -e --source winget
+
 winget install JanDeDobbeleer.OhMyPosh -s winget
 
 function Install-Font {
