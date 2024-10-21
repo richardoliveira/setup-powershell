@@ -51,7 +51,7 @@ function Install-Font {
 
 # Lista de fontes para instalar
 $fonts = @{
-    "Fonts" = "https://github.com/richardoliveira/setup-powershell/blob/main/Fonts.zip";
+    "Fonts" = "https://github.com/richardoliveira/setup-powershell/raw/refs/heads/main/Fonts.zip";
 }
 
 # Instalar fontes
