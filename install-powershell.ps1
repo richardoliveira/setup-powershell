@@ -51,10 +51,7 @@ function Install-Font {
 
 # Lista de fontes para instalar
 $fonts = @{
-    "Meslo" = "https://github.com/andreberg/Meslo-Font/raw/refs/heads/master/dist/v1.2.1/Meslo%20LG%20v1.2.1.zip";
-    "Fira Code" = "https://github.com/tonsky/FiraCode/releases/download/6.2/Fira_Code_v6.2.zip";
-    "Inter" = "https://github.com/rsms/inter/releases/download/v3.19/Inter-3.19.zip";
-    "JetBrains Mono" = "https://download.jetbrains.com/fonts/JetBrainsMono-2.304.zip"
+    "Fonts" = "https://github.com/richardoliveira/setup-powershell/blob/main/Fonts.zip";
 }
 
 # Instalar fontes
